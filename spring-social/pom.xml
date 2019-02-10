@@ -3,13 +3,13 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.example</groupId>
-	<artifactId>spring-social</artifactId>
+	<groupId>fr.seblaporte</groupId>
+	<artifactId>spring-boot-starter-oauth2-social</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>oauth2-demo</name>
-	<description>Demo project for Spring Boot</description>
+	<name>spring-boot-starter-oauth2-social</name>
+	<description>Spring Boot starter OAuth2 Social Login with Google, Facebook, and Github</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -53,6 +53,7 @@
 			<artifactId>jjwt</artifactId>
 			<version>0.5.1</version>
 		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -84,6 +85,5 @@
 			</snapshots>
 		</repository>
 	</repositories>
-
 
 </project>

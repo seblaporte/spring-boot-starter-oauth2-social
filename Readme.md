@@ -1,19 +1,39 @@
-# Spring Boot React OAuth2 Social Login Demo
+# Spring Boot starter for OAuth2 and social login with Google, Facebook and Github
 
-![App Screenshot](screenshot.png)
+> This project is a fork from [callicoder](https://github.com/callicoder). I converted [his project](https://github.com/callicoder/spring-boot-react-oauth2-social-login-demo) into a Spring Boot starter dependency.
 
-## Setting up the Backend Server (spring-social)
+
+## Add the starter to your project
+
++ **Build the starter**
+
+  ```bash
+  mvn clean install
+  ```
 
 + **Create MySQL database**
+
+  This database permits to store users informations.
 
 	```bash
 	mysql> create database spring_social
 	```
 
++ **Add the Maven dependency to your Spring Boot project**
+
+  ```xml
+  <dependency>
+      <groupId>fr.seblaporte</groupId>
+      <artifactId>spring-boot-starter-oauth2-social</artifactId>
+      <version>0.0.1</version>
+  </dependency>
+  ```
+
 + **Configure database username and password**
 
+  Add this to your `application.yml` to configure your database :
+
 	```yml
-	# spring-social/src/main/resources/application.yml
 	spring:
 	    datasource:
 	        url: jdbc:mysql://localhost:3306/spring_social?useSSL=false
@@ -22,8 +42,6 @@
 	```
 
 + **Specify OAuth2 Provider ClientId's and ClientSecrets**
-	
-	> This is optional if you're testing the app in localhost. A demo clientId and clientSecret is already specified.
 
 	```yml
     security:
@@ -62,13 +80,13 @@
 
 	*Also, make sure that the above mentioned scopes are added in the OAuth2 provider console.*	For example, scope `email` and `profile` should be added in your Google project's OAuth2 consent screen.
 
-+ **Run spring-social**
++ **Run your project**
 
 	```bash
 	mvn spring-boot:run
 	```
 
-## Setting up the Frontend Server (react-social)
+## Setting up the Frontend Server to test (react-social)
 
 ```bash
 cd react-social

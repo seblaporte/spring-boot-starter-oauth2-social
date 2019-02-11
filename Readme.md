@@ -8,6 +8,7 @@
 + **Build the starter**
 
   ```bash
+  cd spring-social
   mvn clean install
   ```
 

@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  fr.seblaporte.springsocial.config.SecurityConfig,\
+  fr.seblaporte.springsocial.config.WebMvcConfig,\
+  fr.seblaporte.springsocial.config.InjectionAutoConfiguration

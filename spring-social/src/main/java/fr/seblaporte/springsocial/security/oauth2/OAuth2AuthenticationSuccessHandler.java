@@ -1,6 +1,6 @@
 package fr.seblaporte.springsocial.security.oauth2;
 
-import fr.seblaporte.springsocial.config.AppProperties;
+import fr.seblaporte.springsocial.config.PropertiesConfig;
 import fr.seblaporte.springsocial.exception.BadRequestException;
 import fr.seblaporte.springsocial.security.TokenProvider;
 import fr.seblaporte.springsocial.util.CookieUtils;
@@ -24,13 +24,13 @@ public class OAuth2AuthenticationSuccessHandler extends SimpleUrlAuthenticationS
 
     private TokenProvider tokenProvider;
 
-    private AppProperties appProperties;
+    private PropertiesConfig appProperties;
 
     private HttpCookieOAuth2AuthorizationRequestRepository httpCookieOAuth2AuthorizationRequestRepository;
 
 
     @Autowired
-    OAuth2AuthenticationSuccessHandler(TokenProvider tokenProvider, AppProperties appProperties,
+    OAuth2AuthenticationSuccessHandler(TokenProvider tokenProvider, PropertiesConfig appProperties,
                                        HttpCookieOAuth2AuthorizationRequestRepository httpCookieOAuth2AuthorizationRequestRepository) {
         this.tokenProvider = tokenProvider;
         this.appProperties = appProperties;

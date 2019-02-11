@@ -1,6 +1,5 @@
 package fr.seblaporte.springsocial.security;
 
-
 import fr.seblaporte.springsocial.exception.ResourceNotFoundException;
 import fr.seblaporte.springsocial.model.User;
 import fr.seblaporte.springsocial.repository.UserRepository;
@@ -18,8 +17,12 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 public class CustomUserDetailsService implements UserDetailsService {
 
+    private final UserRepository userRepository;
+
     @Autowired
-    UserRepository userRepository;
+    public CustomUserDetailsService(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
 
     @Override
     @Transactional

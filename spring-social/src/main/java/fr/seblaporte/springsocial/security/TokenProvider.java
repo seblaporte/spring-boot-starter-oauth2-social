@@ -1,6 +1,6 @@
 package fr.seblaporte.springsocial.security;
 
-import fr.seblaporte.springsocial.config.AppProperties;
+import fr.seblaporte.springsocial.config.PropertiesConfig;
 import io.jsonwebtoken.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,9 +14,9 @@ public class TokenProvider {
 
     private static final Logger logger = LoggerFactory.getLogger(TokenProvider.class);
 
-    private AppProperties appProperties;
+    private PropertiesConfig appProperties;
 
-    public TokenProvider(AppProperties appProperties) {
+    public TokenProvider(PropertiesConfig appProperties) {
         this.appProperties = appProperties;
     }
 

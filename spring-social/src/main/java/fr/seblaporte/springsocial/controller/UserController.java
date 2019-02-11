@@ -6,15 +6,21 @@ import fr.seblaporte.springsocial.repository.UserRepository;
 import fr.seblaporte.springsocial.security.CurrentUser;
 import fr.seblaporte.springsocial.security.UserPrincipal;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@ComponentScan("fr.seblaporte.springsocial")
 public class UserController {
 
+    private final UserRepository userRepository;
+
     @Autowired
-    private UserRepository userRepository;
+    public UserController(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
 
     @GetMapping("/user/me")
     @PreAuthorize("hasRole('USER')")

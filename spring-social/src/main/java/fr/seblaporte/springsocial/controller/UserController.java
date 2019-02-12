@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@ComponentScan("fr.seblaporte.springsocial")
 public class UserController {
 
     private final UserRepository userRepository;

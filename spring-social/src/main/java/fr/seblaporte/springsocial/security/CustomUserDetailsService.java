@@ -3,7 +3,6 @@ package fr.seblaporte.springsocial.security;
 import fr.seblaporte.springsocial.exception.ResourceNotFoundException;
 import fr.seblaporte.springsocial.model.User;
 import fr.seblaporte.springsocial.repository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

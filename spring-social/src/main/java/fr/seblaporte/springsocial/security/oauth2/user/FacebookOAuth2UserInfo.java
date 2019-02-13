@@ -3,6 +3,7 @@ package fr.seblaporte.springsocial.security.oauth2.user;
 import java.util.Map;
 
 public class FacebookOAuth2UserInfo extends OAuth2UserInfo {
+
     public FacebookOAuth2UserInfo(Map<String, Object> attributes) {
         super(attributes);
     }
@@ -13,8 +14,13 @@ public class FacebookOAuth2UserInfo extends OAuth2UserInfo {
     }
 
     @Override
-    public String getName() {
-        return (String) attributes.get("name");
+    public String getFirstName() {
+        return (String) attributes.get("first_name");
+    }
+
+    @Override
+    public String getLastName() {
+        return (String) attributes.get("last_name");
     }
 
     @Override
